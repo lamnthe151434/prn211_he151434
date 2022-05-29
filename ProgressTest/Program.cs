@@ -41,15 +41,15 @@ namespace ProgressTest
             {
                 try
                 {
-                    
+
                     int x = Convert.ToInt32(Console.ReadLine());
-                    if(x < min || x > max)
+                    if (x < min || x > max)
                     {
                         throw new Exception($"You must enter a number between {min} - {max}");
                     }
                     return x;
                 }
-                catch(FormatException)
+                catch (FormatException)
                 {
                     Console.WriteLine("You entered wrong format!");
                     Console.Write($"Please enter again {message}: ");
@@ -64,18 +64,26 @@ namespace ProgressTest
 
         public static void DemoGeneric()
         {
+            Console.WriteLine();
+
+
             // Demo Generic
             DemoGenericClass();
 
             // Demo Contraint
-            DemoContraint();
+            //DemoContraint();
 
             // Demo Generic Interface
             DemoGenericInterface();
+
+            Console.WriteLine();
         }
 
         public static void DemoCollection()
         {
+            Console.WriteLine();
+
+
             // Demo List
             DemoList();
 
@@ -84,6 +92,174 @@ namespace ProgressTest
 
             // Demo Enumerable
             DemoEnumerable();
+
+            // Demo LinkedList
+            DemoLinkedList();
+
+            // Demo Dictionary
+            DemoDictionary();
+
+            // Demo Sorted Dictionary
+            DemoSortedDictionary();
+
+            // Demo Queue (FIFO)
+            DemoQueue();
+
+            // Demo Stack (LIFO)
+            DemoStack();
+
+            Console.WriteLine();
+
+        }
+
+        public static void DemoStack()
+        {
+            Console.WriteLine("\n8. Demo Stack");
+
+            Stack<int> myStack = new();
+
+            for (int i = 0; i < 10; i++)
+            {
+                myStack.Push(i);
+            }
+
+            Console.WriteLine("Stack after push 0-9 numbers: ");
+            foreach (var item in myStack)
+            {
+                Console.Write($"{item,2}");
+            }
+            Console.WriteLine();
+
+            myStack.Pop();
+            myStack.Pop();
+            Console.WriteLine("Stack after pop 2 times: ");
+            foreach (var item in myStack)
+            {
+                Console.Write($"{item,2}");
+            }
+            Console.WriteLine();
+
+
+        }
+
+        public static void DemoQueue()
+        {
+            Console.WriteLine("\n7. Demo Queue");
+
+            Queue<int> myQueue = new();
+
+            for (int i = 0; i < 10; i++)
+            {
+                myQueue.Enqueue(i);
+            }
+
+            Console.WriteLine("Queue after enqueue 0-9 numbers: ");
+            foreach (var item in myQueue)
+            {
+                Console.Write($"{item, 2}");
+            }
+            Console.WriteLine();
+
+            myQueue.Dequeue();
+            myQueue.Dequeue();
+
+            Console.WriteLine("Queue after dequeue 2 times: ");
+            foreach (var item in myQueue)
+            {
+                Console.Write($"{item,2}");
+            }
+            Console.WriteLine();
+
+
+        }
+
+        public static void DemoSortedDictionary()
+        {
+            Console.WriteLine("\n6. Demo Sorted Dictionary");
+            SortedDictionary<int, string> people = new();
+
+            people.Add(5, "Lam");
+            //people.Add(1, "Thanh");
+            people.Add(4, "Duc");
+            people.Add(3, "Canh");
+            people.Add(2, "Phi");
+            people.Add(1, "Hung");
+
+            Console.WriteLine("People in Sorted Dictionary: ");
+
+            foreach (var person in people)
+            {
+                Console.WriteLine($"Id: {person.Key}, Name: {person.Value}");
+            }
+        }
+
+        public static void DemoDictionary()
+        {
+            Console.WriteLine("\n5. Demo Dictionary");
+
+            Dictionary<int, string> people = new Dictionary<int, string>();
+
+            people.Add(5, "Lam");
+            //people.Add(1, "Thanh");
+            people.Add(4, "Duc");
+            people.Add(3, "Canh");
+            people.Add(2, "Phi");
+            people.Add(1, "Hung");
+
+            Console.WriteLine("People in Dictionary: ");
+            foreach (var person in people)
+            {
+                Console.WriteLine($"Id: {person.Key}, Name: {person.Value}");
+            }
+        }
+
+        public static void DemoLinkedList()
+        {
+            Console.WriteLine("\n4. Demo LinkedList");
+            List<int> list = new();
+            LinkedList<int> linkedlist = new();
+
+            var watch = new System.Diagnostics.Stopwatch();
+
+            // Execution time when adding a number to list
+            watch.Start();
+            for (int i = 0; i < Math.Pow(10, 6); i++)
+            {
+                list.Add(i);
+            }
+            watch.Stop();
+
+            long execuationTime = watch.ElapsedMilliseconds;
+            Console.WriteLine($"Adding {Math.Pow(10, 6)} numbers to list spent {execuationTime} ms");
+
+            // Execution time when adding a number to linkedlist
+            watch.Start();
+            for (int i = 1; i <= Math.Pow(10, 6); i++)
+            {
+                linkedlist.AddLast(i);
+            }
+            watch.Stop();
+
+            execuationTime = watch.ElapsedMilliseconds;
+            Console.WriteLine($"Adding {Math.Pow(10, 6)} numbers to linkedlist spent {execuationTime} ms");
+
+
+            watch.Start();
+            for (int i = Convert.ToInt32(Math.Pow(10, 3)); i >= 10; i--)
+            {
+                list.Remove(i);
+            }
+            watch.Stop();
+            Console.WriteLine($"Removing {Math.Pow(10, 3) - 9} numbers in list spent {execuationTime} ms");
+
+            watch.Start();
+            for (int i = Convert.ToInt32(Math.Pow(10, 3)); i >= 10; i--)
+            {
+                linkedlist.Remove(i);
+            }
+            watch.Stop();
+            Console.WriteLine($"Removing {Math.Pow(10, 3) - 9} numbers in linkedlist spent {execuationTime} ms");
+
         }
 
         public static void DemoEnumerable()
@@ -112,6 +288,7 @@ namespace ProgressTest
 
             Random random = new();
             SortedSet<int> sortedNumbers = new();
+
 
             // Before in sorted set
             Console.WriteLine("Before in sorted set: ");
@@ -154,7 +331,7 @@ namespace ProgressTest
 
         public static void DemoGenericInterface()
         {
-            Console.WriteLine("\n4. Demo Generic Interface");
+            Console.WriteLine("\n3. Demo Generic Interface");
             MyFirstClass first = new();
             dynamic result = first.Add(5, 10);
             Console.WriteLine($"Result 1(int type): {result}");
