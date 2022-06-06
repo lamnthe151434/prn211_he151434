@@ -1,0 +1,16 @@
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\bin\Debug\net5.0\Slot12.exe
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\bin\Debug\net5.0\Slot12.deps.json
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\bin\Debug\net5.0\Slot12.runtimeconfig.json
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\bin\Debug\net5.0\Slot12.runtimeconfig.dev.json
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\bin\Debug\net5.0\Slot12.dll
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\bin\Debug\net5.0\ref\Slot12.dll
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\bin\Debug\net5.0\Slot12.pdb
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\obj\Debug\net5.0\Slot12.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\obj\Debug\net5.0\Slot12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\obj\Debug\net5.0\Slot12.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\obj\Debug\net5.0\Slot12.AssemblyInfo.cs
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\obj\Debug\net5.0\Slot12.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\obj\Debug\net5.0\Slot12.dll
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\obj\Debug\net5.0\ref\Slot12.dll
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\obj\Debug\net5.0\Slot12.pdb
+C:\Users\ADMIN\Documents\PRN211\PRN211\Slot12\obj\Debug\net5.0\Slot12.genruntimeconfig.cache
